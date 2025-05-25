@@ -64,7 +64,7 @@
             - [3.3.2.12. Cerrar sesión](#33212-cerrar-sesion)
 
 - **4. Configuración de la BBDD.**
-- [4. Configuración de la BBDD](#4-configuracion-de-la-bbdd)
+    - [4. Configuración de la BBDD](#4-configuracion-de-la-bbdd)
 ---
 
 # 0. Introducción.
