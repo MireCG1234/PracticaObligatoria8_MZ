@@ -364,7 +364,10 @@ El mensaje que llega al asignar el ID Telegram a un trabajador.
 ## 4. Configuración de la BBDD
 Para que este proyecto funcione correctamente con base de datos, es necesario realizar los siguientes pasos:
   1. Crear una BBDD: asegúrate de tener instalado un motor de base de datos compatible (por ejemplo, MySQL, PostgreSQL, H2, etc).
-  2. Crear las tablas: 
+  2. Crear las tablas.
+  3. Configurar el acceso a las BBDD: edita el archivo de configuración (application.properties o application.yml, según lo que uses) con tus credenciales y datos de conexión.
+
+MySQL utiliza el puerto 3306, verifique que ese puerto no esté en algún otro uso para que este procedimiento no se vea afectado.
 
 ---
 
