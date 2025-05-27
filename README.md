@@ -4,7 +4,7 @@
 ### Índice:
 
 - **🔸 0. Introducción. 🔸**  
-    - [0.0. Instalación](#00-instalacion)  
+    - [0.0. Instalación](#00-instalación)  
     - [0.1. Descarga](#01-descarga)  
     - [0.2. Título](#02-titulo)  
     - [0.3. Menú principal](#03-menu-principal)
