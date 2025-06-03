@@ -1,5 +1,5 @@
-# ⭐ Practica Obligatoria T8 ⭐
-Última práctica de programación. Modificada la persistencia para poder usar conexión a base de datos.
+# ⭐ Proyecto Final 1DAM - FernanShop_MZ ⭐
+- Última práctica de programación. Modificada la persistencia para poder usar conexión a una base de datos mySQL. -
 ## Programa de simulación de una librería - "FERNANSHOP"
 ### Índice:
 
