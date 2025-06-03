@@ -20,6 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `FernanShop_MZ`
 --
+-- *** PARA EMPEZAR MIRAR LÍNEAS : 41 Y 144 (Datos para empezar a usar la APP) ***
 
 -- --------------------------------------------------------
 
@@ -37,9 +38,10 @@ CREATE TABLE `Admins` (
 --
 -- Volcado de datos para la tabla `Admins`
 --
+-- SUSTITUIR DATOS DE PRUEBA POR LOS VERDADEROS:
 
-INSERT INTO `Admins` (`ID`, `Nombre`, `Correo`, `Pass`) VALUES
-('AD0001', 'Administrador', 'mireyacuegarri@gmail.com', '1234');
+/*INSERT INTO `Admins` (`ID`, `Nombre`, `Correo`, `Pass`) VALUES
+('AD0001', 'Administrador', 'xxx@gmail.com', '1234');*/
 
 -- --------------------------------------------------------
 
@@ -51,12 +53,6 @@ CREATE TABLE `Carritos` (
   `IDCliente` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Volcado de datos para la tabla `Carritos`
---
-
-INSERT INTO `Carritos` (`IDCliente`) VALUES
-('CL00000001');
 
 -- --------------------------------------------------------
 
@@ -88,15 +84,6 @@ CREATE TABLE `Clientes` (
   `Movil` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Volcado de datos para la tabla `Clientes`
---
-
-INSERT INTO `Clientes` (`ID`, `Nombre`, `Correo`, `Pass`, `Localidad`, `Provincia`, `Direccion`, `Movil`) VALUES
-('CL00000001', 'Mireya Cliente', 'mireya.cueto.0806@fernando3martos.com', '1234', 'Martos', 'Jaén', 'Martos - Jajas', '987654321'),
-('CL00000002', 'Zamira Cliente', 'zamirasuriel@gmail.com', '1234', 'Martos', 'Jaén', 'Calle Quizas 1234', '987654321'),
-('CL085622308', 'Mireya2', 'mcuegar084@g.educaand.es', '1234', 'Martos', 'Jaen', 'Avda si', '234234234');
-
 -- --------------------------------------------------------
 
 --
@@ -112,16 +99,6 @@ CREATE TABLE `Pedidos` (
   `Comentario` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Volcado de datos para la tabla `Pedidos`
---
-
-INSERT INTO `Pedidos` (`ID`, `ID_Cliente`, `Estado`, `FechaPedido`, `FechaEntrega`, `Comentario`) VALUES
-('PE00943654', 'CL00000001', '1', '2025-05-23', '2025-05-28', ''),
-('PE010928636', 'CL00000001', '2', '2025-05-23', '2025-05-28', 'su pedido ha sido enviado'),
-('PE017880148', 'CL00000001', '3', '2025-05-22', '2025-05-27', 'hola'),
-('PE072172492', 'CL00000001', '1', '2025-05-23', '2025-05-28', '');
-
 -- --------------------------------------------------------
 
 --
@@ -135,19 +112,6 @@ CREATE TABLE `Pedido_Producto` (
   `Cantidad` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Volcado de datos para la tabla `Pedido_Producto`
---
-
-INSERT INTO `Pedido_Producto` (`ID`, `IDPedido`, `IDProducto`, `Cantidad`) VALUES
-(4, 'PE017880148', 34545, 1),
-(5, 'PE010928636', 97463, 1),
-(6, 'PE072172492', 34545, 1),
-(7, 'PE072172492', 34545, 1),
-(8, 'PE00943654', 34545, 1),
-(9, 'PE00943654', 45632, 1),
-(10, 'PE00943654', 45632, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -158,14 +122,6 @@ CREATE TABLE `Pedido_Trabajador` (
   `IDPedido` varchar(100) NOT NULL,
   `IDTrabajador` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Volcado de datos para la tabla `Pedido_Trabajador`
---
-
-INSERT INTO `Pedido_Trabajador` (`IDPedido`, `IDTrabajador`) VALUES
-('PE010928636', 'TR000001'),
-('PE00943654', 'TR000002');
 
 -- --------------------------------------------------------
 
@@ -185,6 +141,7 @@ CREATE TABLE `Productos` (
 --
 -- Volcado de datos para la tabla `Productos`
 --
+-- PUEDES AÑADIR NUEVOS PRODUCTOS O MODIFICAR LOS QUE HAY DESDE AQUÍ:
 
 INSERT INTO `Productos` (`ID`, `Marca`, `Modelo`, `Descripcion`, `Precio`, `Relevancia`) VALUES
 (5643, 'Sony', 'WH-1000XM5', 'Auriculares inalámbricos con cancelación de ruido', 349.99, 8),
@@ -229,14 +186,6 @@ CREATE TABLE `Trabajadores` (
   `Movil` varchar(20) DEFAULT NULL,
   `IDTelegram` varchar(100) DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Volcado de datos para la tabla `Trabajadores`
---
-
-INSERT INTO `Trabajadores` (`ID`, `Nombre`, `Correo`, `Pass`, `Movil`, `IDTelegram`) VALUES
-('TR000001', 'Mireya', 'darkcrowd16@gmail.com', '1234', '123123123', NULL),
-('TR000002', 'Zamira', 'zamira.suriel@fernando3martos.com', '1234', '123456789', NULL);
 
 --
 -- Índices para tablas volcadas
